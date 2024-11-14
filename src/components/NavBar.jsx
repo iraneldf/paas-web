@@ -14,8 +14,9 @@ const Header = () => {
     const pathname = usePathname();
 
     return (<header className="bg-gray-300 text-black relative">
-        <div className="mx-auto px-5 xl:px-20 py-2 flex justify-between items-center">
-            <Image src={'/image/Logo PAAS.svg'} alt={'Logo'} width={100} height={50}/>
+        <div className="mx-auto px-5 xl:px-20  flex justify-between items-center">
+
+            <Image className={'object-cover w-[130px] h-full'} src={'/image/Logo PAAS.png'} priority alt={'Logo'} width={130} height={100}/>
 
             <nav className={'hidden lg:block'}>
                 <ul className="flex space-x-4">

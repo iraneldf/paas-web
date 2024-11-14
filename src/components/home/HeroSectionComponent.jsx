@@ -10,12 +10,12 @@ export default function HeroSectionComponent() {
 
             <div className="absolute inset-0 bg-black opacity-30 z-10"/>
 
-
             <div className="relative z-20 text-center">
-                <h2 className="text-5xl font-bold mb-4">Soluciones tecnológicas para el campo del mañana</h2>
-                <p className="text-xl mb-8">Por un mayor acceso a una alimentación sana, diversa y estable de la
-                    población de Cuba</p>
-                <Button className='hover:bg-green-800' size="lg">Descubre Más</Button>
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold w-[85vw] mb-4">Por un mayor acceso a una
+                    alimentación sana, diversa y estable de la
+                    población de Cuba</h2>
+                {/*<p className="lg:text-xl mb-8">Programa de Apoyo a una Agricultura Sostenible en Cuba de la Asociación Cubana de Técnicas Agrícolas y Forestales</p>*/}
+                <a href="#services"> <Button className='hover:bg-green-800' size="lg">Descubre Más</Button></a>
             </div>
         </section>
     )

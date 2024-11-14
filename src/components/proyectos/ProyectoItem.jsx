@@ -29,7 +29,7 @@ export default function ProyectoItem({
                     {impact && <CheckCircle className="w-6 absolute h-6 text-green-500"/>}
 
                     <Image src={coverImage} alt={title} width={400} height={200}
-                           className="w-full h-48 object-cover"/>
+                           className="w-full h-60 object-cover"/>
                     <CardContent className="p-6">
                         <h2 className="text-xl font-semibold text-green-700 mb-2">{title}</h2>
                         <p className="text-gray-600 mb-4 truncate-multiline">{description}</p>

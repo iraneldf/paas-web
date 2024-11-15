@@ -2,24 +2,19 @@
 import {useState, useEffect} from 'react'
 import Image from 'next/image'
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card"
-import {Badge} from "@/components/ui/badge"
 import {Progress} from "@/components/ui/progress"
 import {
-    Leaf,
+
     Calendar,
     Users,
     MapPin,
-    Target,
     CheckCircle,
-    BadgeDollarSign,
     BadgeDollarSignIcon,
-    ChevronLeft, ChevronRight, Sprout
 } from "lucide-react"
-import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel"
 import {useSearchParams} from "next/navigation";
 import {ProjectCarousel} from "@/components/proyectos/ProjectCarousel";
 
-export default function ProjectDetails({params}) {
+export default function ProjectDetails() {
     // const router = useRouter()
     const searchParams = useSearchParams();
     const id = searchParams.get('proyectoID');
@@ -45,7 +40,9 @@ export default function ProjectDetails({params}) {
                 'R2: Mejoradas las capacidades para la transformación y comercialización de lácteos a nivel local.',
                 'R3: Mejoradas las capacidades de gobernanza local de los sistemas agroalimentarios y promovida la educación alimentaria y nutricional en sectores vulnerables de la población.'],
             companyLogos: ["/image/proyectos/logos/Actaf.svg", "/image/proyectos/logos/Oficina.svg", "/image/proyectos/logos/GEGAN.svg", "/image/proyectos/logos/AICD.svg", "/image/proyectos/logos/MINAGRI.svg",],
-            carouselImages: ["/image/proyectos/carrusel/carruselImage.png", "/image/proyectos/carrusel/carruselImage2.png"]
+            carouselImages: ["/image/proyectos/carrusel/carruselImage.png", "/image/proyectos/carrusel/carruselImage4.png"],
+            carouselImages2: ["/image/proyectos/carrusel/carruselImage2.png", "/image/proyectos/carrusel/carruselImage3.png"]
+
         }
         setProject(mockProject)
     }, [id])
@@ -117,7 +114,7 @@ export default function ProjectDetails({params}) {
                             <p>
                                 Área de incidencia: 3 UBPC (“13 de marzo”, “Juan Oramas” y “26 de julio”) y una UEB
                                 (“Victoria
-                                de Girón”), además del PDL “Vista Hermosa", y entidades locales de servicios técnicos.
+                                de Girón”), además del PDL “Vista Hermosa&#34;, y entidades locales de servicios técnicos.
                                 Municipio
                                 Guanabacoa. La Habana.
                             </p>
@@ -158,7 +155,41 @@ export default function ProjectDetails({params}) {
                     </div>
 
 
-                    <ProjectCarousel images={project.carouselImages} />
+                    <ProjectCarousel images={project.carouselImages}/>
+
+                    <h1 className={'font-bold text-3xl text-center'}>NOTICIAS SOBRE LA MARCHA</h1>
+                    <div className={'p-10 text-xl flex flex-col gap-10'}>
+                        <p>Taller de inicio del proyecto en el municipio Guanabacoa.</p>
+                        <p>
+                            El pasado 21 de junio de 2024 se efectuó el Taller de Arrancada del proyecto, en el Centro
+                            de
+                            Capacitación “La Cascada”, de la Empresa Agropecuaria Bacuranao, Guanabacoa, con la
+                            asistencia
+                            de 46 personas. Estaban presentes los beneficiarios directos del proyecto, autoridades de
+                            Gobierno municipal, actores directos e indirectos de las acciones previstas, el
+                            representantes
+                            de ACTAF nacional, provincial y municipal, el Equipo Gestor de PAAS, y una amplia
+                            representación
+                            de la oficina de AICS en Cuba, encabezada por su Director Antonio Festa.
+                        </p>
+                        <p>
+                            En el taller, el Director del Programa PAAS, Juan Perez Lamas, compartió el camino recorrido
+                            para llegar a este momento y el objetivo perseguido con el mismo. También se presentaron los
+                            integrantes del Equipo Externo y el Equipo local de ejecución. A continuación Roberto
+                            Caballero
+                            (Miembro del Equipo de Gestión) presentó los contenidos generales y la lógica prevista de
+                            iontervención. Se continuó con la explicación del procedimiento para las adquisiciones por
+                            William Graupera, la explicaciómn del Plan de Actividades y Sistema de Monitoreo, por parte
+                            de
+                            Elieser Perera, concluyendo con la socialización del proceso que se iniciaría de inmediato
+                            para
+                            el diagnóstico de la situación actual y proyecciones previstas para cada finca. Todo ello
+                            estuvo
+                            acompañado de una activa participación de los presentes.
+                        </p>
+                    </div>
+
+                    <ProjectCarousel images={project.carouselImages2}/>
 
                 </CardContent>
             </Card>

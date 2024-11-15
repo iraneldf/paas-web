@@ -27,12 +27,12 @@ export function ProjectCarousel({images}) {
 
                 <div className="absolute inset-0 flex items-center justify-between p-4">
                     <CarouselPrevious
-                        className="relative left-0 top-0 h-8 w-8 rounded-full bg-white/70 hover:bg-white/100">
+                        className="relative left-0 top-0 h-10 w-10 rounded-full bg-white/70 hover:bg-green-700">
                         <Leaf className="h-4 w-4 text-green-800"/>
                     </CarouselPrevious>
 
                     <CarouselNext
-                        className="relative right-0 top-0 h-8 w-8 rounded-full bg-white/70 hover:bg-white/100">
+                        className="relative right-0 top-0 h-10 w-10 rounded-full bg-white/70 hover:bg-green-700">
                         <Sprout className="h-4 w-4 text-green-800"/>
                     </CarouselNext>
 

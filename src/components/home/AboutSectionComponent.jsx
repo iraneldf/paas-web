@@ -59,7 +59,10 @@ export default function AboutSectionComponent() {
                                 y
                                 productoras.
                             </p>
-                            <Button variant="outline" className={'hover:bg-[#EF8422]'}>Conoce Nuestro Equipo</Button>
+                            <Link href={'/nuestro-equipo'}>
+                                <Button variant="outline" className={'hover:bg-[#EF8422]'}>Conoce Nuestro
+                                    Equipo</Button>
+                            </Link>
                         </div>
 
                         <div className="md:w-1/2 md:mb-0">

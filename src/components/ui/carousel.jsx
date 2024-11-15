@@ -1,11 +1,10 @@
 "use client";
 import * as React from "react"
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons"
 import useEmblaCarousel from "embla-carousel-react";
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import {ChevronLeft, ChevronLeftIcon, ChevronRightIcon} from "lucide-react";
+import {ChevronLeftIcon, ChevronRightIcon} from "lucide-react";
 
 const CarouselContext = React.createContext(null)
 
@@ -158,7 +157,7 @@ const CarouselPrevious = React.forwardRef(({ className, variant = "outline", siz
       ref={ref}
       variant={variant}
       size={size}
-      className={cn("absolute  h-8 w-24 rounded-full", orientation === "horizontal"
+      className={cn("absolute  h-8 w-8 rounded-full", orientation === "horizontal"
         ? "-left-12 top-1/2 -translate-y-1/2"
         : "-top-12 left-1/2 -translate-x-1/2 rotate-90", className)}
       disabled={!canScrollPrev}

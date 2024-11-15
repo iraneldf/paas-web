@@ -16,7 +16,8 @@ const Header = () => {
     return (<header className="bg-gray-300 text-black relative">
         <div className="mx-auto px-5 xl:px-20  flex justify-between items-center">
 
-            <Image className={'object-cover w-[130px] h-full'} src={'/image/Logo PAAS.png'} priority alt={'Logo'} width={130} height={100}/>
+            <Image className={'object-cover w-[130px] h-full'} src={'/image/Logo PAAS.png'} priority alt={'Logo'}
+                   width={130} height={100}/>
 
             <nav className={'hidden lg:block'}>
                 <ul className="flex space-x-4">
@@ -39,19 +40,19 @@ const Header = () => {
                             terminados</Link>
                     </li>
                     <li>
-                        <a href="#contact"
-                           className="hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1">
+                        <Link href="/productos-resultados"
+                              className={` ${pathname === '/productos-resultados' && 'bg-green-800 text-white'} hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1`}>
                             Productos
-                            y resultados</a>
+                            y resultados</Link>
                     </li>
                     <li>
-                        <a href="#team"
-                           className="hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1">Nuestro
-                            equipo</a>
+                        <Link href="/nuestro-equipo/"
+                              className={` ${pathname === '/nuestro-equipo' && 'bg-green-800 text-white'} hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1`}>Nuestro
+                            equipo</Link>
                     </li>
                     <li>
-                        <a href="#contact"
-                           className="hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1">Contáctanos</a>
+                        <Link href="/#contact"
+                              className="hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1">Contáctanos</Link>
                     </li>
                 </ul>
             </nav>
@@ -69,32 +70,36 @@ const Header = () => {
                 <ul className="flex flex-col items-center gap-2 pb-10">
                     <li>
                         <Link href="/"
-                              className={` ${pathname === '/' && 'bg-green-800 text-white'} hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1`}>¿Quiénes
+                              className={` ${pathname === '/' && 'bg-green-800 text-white'} hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1`}>
+                            ¿Quiénes
                             somos?</Link>
                     </li>
                     <li>
                         <Link href="/proyectos/en-proceso"
-                              className={` ${pathname === '/proyectos/en-proceso' && 'bg-green-800 text-white'} hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1`}>Proyectos
+                              className={` ${pathname === '/proyectos/en-proceso' && 'bg-green-800 text-white'} hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1`}>
+                            Proyectos
                             en curso</Link>
                     </li>
                     <li>
                         <Link href="/proyectos/terminados"
-                              className={` ${pathname === '/proyectos/terminados' && 'bg-green-800 text-white'} hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1`}>Proyectos
+                              className={` ${pathname === '/proyectos/terminados' && 'bg-green-800 text-white'} hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1`}>
+                            Proyectos
                             terminados</Link>
                     </li>
                     <li>
-                        <a href="#contact"
-                           className="hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1">Productos
-                            y resultados</a>
+                        <Link href="/productos-resultados"
+                              className={` ${pathname === '/productos-resultados' && 'bg-green-800 text-white'} hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1`}>
+                            Productos
+                            y resultados</Link>
                     </li>
                     <li>
-                        <a href="#team"
-                           className="hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1">Nuestro
-                            equipo</a>
+                        <Link href="/nuestro-equipo/"
+                              className="hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1">Nuestro
+                            equipo</Link>
                     </li>
                     <li>
-                        <a href="#contact"
-                           className="hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1">Contáctanos</a>
+                        <Link href="/#contact"
+                              className="hover:bg-green-800 hover:text-white transition duration-300 rounded px-2 py-1">Contáctanos</Link>
                     </li>
                 </ul>
             </nav>

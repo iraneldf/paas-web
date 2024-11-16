@@ -48,7 +48,7 @@ export default function AboutSectionComponent() {
                 <div className="container bg-gray-100 shadow-2xl rounded-2xl overflow-hidden">
                     <div className="flex flex-col md:flex-row items-center ">
                         <div className="md:w-1/2 p-5">
-                            <h2 className="text-3xl font-bold mb-4">Gestión de riesgos</h2>
+                            <h2 className="text-xl md:text-3xl font-bold mb-4">Gestión de riesgos</h2>
                             <p className="text-gray-600 text-xl mb-6">
                                 Se aborda este enfoque con un alcance que va desde la resiliencia ante fenómenos
                                 biológicos
@@ -81,7 +81,7 @@ export default function AboutSectionComponent() {
                                    width={200} height={200}/>
                         </div>
                         <div className="md:w-1/2 order-1 md:order-2 p-5">
-                            <h2 className="text-3xl font-bold mb-4">Economía Circular Sostenible</h2>
+                            <h2 className="text-xl md:text-3xl font-bold mb-4">Economía Circular Sostenible</h2>
                             <p className="text-gray-600 text-xl mb-6">
                                 Concebida la ECS desde tres enfoques: Económico, social, ambiental y, como objetivos de
                                 las
@@ -102,7 +102,7 @@ export default function AboutSectionComponent() {
                 <div className="container bg-gray-100 shadow-2xl rounded-2xl overflow-hidden">
                     <div className="flex flex-col md:flex-row items-center ">
                         <div className="md:w-1/2 p-5">
-                            <h2 className="text-3xl font-bold mb-4">Equidad de Género y Generacional</h2>
+                            <h2 className="text-xl md:text-3xl font-bold mb-4">Equidad de Género y Generacional</h2>
                             <p className="text-gray-600 text-xl mb-6">
                                 Sin considerar la equidad de género y generacional resulta imposible hablar de verdadera
                                 participación ni de sostenibilidad, por lo cual se promoverá la presencia de mujeres y

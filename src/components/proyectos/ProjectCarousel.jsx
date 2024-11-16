@@ -6,38 +6,32 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 
 export function ProjectCarousel({images}) {
 
-    return (
-        <div className={'flex flex-col justify-center'}>
+    return (<div className={'flex flex-col justify-center'}>
 
-            <Carousel className="max-w-[100%]">
-                <CarouselContent>
-                    {images.map((image, index) => (
+        <Carousel className="">
+            <CarouselContent>
+                {images.map((image, index) => (
 
-                        <CarouselItem key={index}>
-                            <div className=" w-full h-[600px]">
-                                <Image key={index} src={image} alt={`Project Image ${index + 1}`}
-                                       width={600}
-                                       height={600} className="w-full object-cover"/>
-                            </div>
-                        </CarouselItem>
+                    <CarouselItem key={index}>
 
-                    ))}
+                        <Image key={index} src={image} alt={`Project Image ${index + 1}`}
+                               width={300}
+                               height={300} className="w-full h-full"/>
 
-                </CarouselContent>
+                    </CarouselItem>
 
-                <div className="absolute inset-0 flex items-center justify-between p-4">
-                    <CarouselPrevious
-                        className="relative left-0 top-0 h-10 w-10 rounded-full bg-white/70 hover:bg-green-700">
-                        <Leaf className="h-4 w-4 text-green-800"/>
-                    </CarouselPrevious>
+                ))}
 
-                    <CarouselNext
-                        className="relative right-0 top-0 h-10 w-10 rounded-full bg-white/70 hover:bg-green-700">
-                        <Sprout className="h-4 w-4 text-green-800"/>
-                    </CarouselNext>
+            </CarouselContent>
 
-                </div>
-            </Carousel>
-        </div>
-    )
+            <div className="absolute inset-0 items-center justify-between p-4 flex">
+                <CarouselPrevious
+                    className="relative left-0 top-0 md:size-10 rounded-full bg-white/70 hover:bg-green-700"/>
+
+                <CarouselNext
+                    className="relative right-0 top-0 md:size-10 rounded-full bg-white/70 hover:bg-green-700"/>
+
+            </div>
+        </Carousel>
+    </div>)
 }

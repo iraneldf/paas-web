@@ -1,19 +1,14 @@
-'use client'
-
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Mail } from 'lucide-react'
-import dynamic from 'next/dynamic'
 
-const MapComponent = dynamic(() => import('@/components/MapComponent'), {
-    loading: () => <p>Cargando mapa...</p>,
-    ssr: false
-})
+// Asegúrate de reemplazar 'TU_CLAVE_DE_API' con tu clave real de Google Maps
+const GOOGLE_MAPS_API_KEY = 'TU_CLAVE_DE_API'
 
-export function ContactSectionForm() {
+export function ContactSection() {
     return (
         <section className="py-16 bg-green-50">
             <div className="container mx-auto px-4">
@@ -39,8 +34,15 @@ export function ContactSectionForm() {
 
                     <div className="space-y-6">
                         <Card>
-                            <CardContent className="pt-6 h-[300px]">
-                                <MapComponent />
+                            <CardContent className="pt-6">
+                                <iframe
+                                    width="100%"
+                                    height="300"
+                                    frameBorder="0"
+                                    style={{ border: 0 }}
+                                    src={`https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}&q=AgriTech+Solutions,Ciudad+de+México`}
+                                    allowFullScreen
+                                ></iframe>
                             </CardContent>
                         </Card>
 

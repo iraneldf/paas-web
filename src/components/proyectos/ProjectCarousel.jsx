@@ -8,7 +8,7 @@ export function ProjectCarousel({images}) {
 
     return (<div className={'flex flex-col justify-center'}>
 
-        <Carousel className="">
+        <Carousel>
             <CarouselContent>
                 {images.map((image, index) => (
 

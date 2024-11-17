@@ -1,8 +1,9 @@
 import HeroSectionComponent from "@/components/home/HeroSectionComponent";
 import ServiceSectionComponent from "@/components/home/ServiceSectionComponent";
 import AboutSectionComponent from "@/components/home/AboutSectionComponent";
-import ContactFormComponent from "@/components/home/ContactFormComponent";
 import TestimonialSectionComponent from "@/components/home/TestimonialSectionComponent";
+import {ContactSectionForm} from "@/components/home/ContactFormComponent";
+import {ContactSection} from "@/components/contact-section";
 
 export default function AgriTechLanding() {
     return (<>
@@ -20,7 +21,9 @@ export default function AgriTechLanding() {
             <TestimonialSectionComponent/>
 
             {/* Contact Form */}
-            <ContactFormComponent/>
+            <ContactSectionForm/>
+
+            <ContactSection/>
 
 
         </main>

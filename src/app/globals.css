@@ -70,3 +70,11 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4; /* Change this number to limit lines */
+  line-height: 1.5; /* Adjust line height as needed */
+}

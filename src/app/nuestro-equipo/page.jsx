@@ -38,8 +38,10 @@ export default function NuestroEquipo() {
 
         <div className={'relative min-h-screen'}>
 
-            <div className="container mx-auto p-4 pt-6 md:p-6 lg:p-12 xl:p-24 overflow-hidden">
-                <h1 className="text-3xl text-gray-900 font-bold mb-10 text-center">Nuestro Equipo</h1>
+            <div className="container mx-auto p-4 md:px-8 md:py-12 overflow-hidden">
+
+                <h1 className="text-4xl font-bold text-green-800 mb-8 text-center">Nuestro Equipo</h1>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {equipo.map((miembro, index) => (
                         <div key={index}

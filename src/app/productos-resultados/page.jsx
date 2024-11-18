@@ -61,21 +61,20 @@ const ProgramSection = () => {
                         <Image src={program.image} alt={program.name} width={120} height={400}
                                className="w-52 h-72 object-fill self-center md:self-start rounded-lg mb-4 md:mr-4"/>
 
-                        <div className="flex flex-col justify-between overflow-hidden">
+                        <div className="h-full flex flex-col justify-between overflow-hidden">
 
-                            <CardHeader className="flex justify-between items-center">
-                                <CardTitle
-                                    className="text-2xl md:text-2xl lg:text-3xl font-bold text-gray-800">{program.name}</CardTitle>
+                            <CardHeader className="items-center">
+                                <CardTitle className="text-2xl md:text-2xl lg:text-3xl font-bold text-gray-800">{program.name}</CardTitle>
                             </CardHeader>
 
                             <CardContent className="py-4 overflow-y-auto">
                                 <CardDescription
-                                    className="text-lg lg:text-xl text-gray-600 max-h-60">{program.description}</CardDescription>
+                                    className=" text-lg lg:text-xl text-gray-600 max-h-60">{program.description}</CardDescription>
                             </CardContent>
 
-                            <CardFooter className="flex justify-end justify-self-end self-end overflow-hidden">
+                            <CardFooter className="flex flex-col justify-end items-end p-2">
                                 <Button variant="link" href={program.document} download
-                                        className="text-lg md:text-xl text-blue-600 hover:text-blue-800 flex items-center gap-2">
+                                        className="text-lg md:text-xl text-blue-600 hover:text-blue-800 flex text-wrap items-center gap-2">
                                     <Download className="w-5 h-5"/>
                                     Descargar documento
                                 </Button>

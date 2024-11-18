@@ -16,12 +16,12 @@ export default function ProyectoItem({
                                          companyLogos,
                                          type,
                                          progress,
-                                         impact
+                                         impact,
                                      }) {
     return (
 
         <>
-            <Link href={`/proyectos/${id}`} key={id}>
+            <Link href={`/proyectos/${id}?progress=${!!progress}`} key={id}>
 
                 <Card
                     className="h-full relative flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer bg-white overflow-hidden">

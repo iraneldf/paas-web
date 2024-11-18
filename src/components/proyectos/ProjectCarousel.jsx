@@ -26,10 +26,10 @@ export function ProjectCarousel({images}) {
 
             <div className="absolute inset-0 items-center justify-between p-4 flex">
                 <CarouselPrevious
-                    className="relative left-0 top-0 md:size-10 rounded-full bg-white/70 hover:bg-green-700"/>
+                    className="absolute left-2 md:size-10 rounded-full bg-white/70 hover:bg-green-700"/>
 
                 <CarouselNext
-                    className="relative right-0 top-0 md:size-10 rounded-full bg-white/70 hover:bg-green-700"/>
+                    className="absolute right-2 md:size-10 rounded-full bg-white/70 hover:bg-green-700"/>
 
             </div>
         </Carousel>

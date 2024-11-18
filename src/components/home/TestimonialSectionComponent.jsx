@@ -10,7 +10,7 @@ export default function TestimonialSectionComponent() {
 
     const handleNavigation = (pid) => {
         // Navegar a la ruta específica y enfocar la sección de noticias
-        router.push(`/proyectos/${pid}#noticias`);
+        router.push(`/proyectos/${pid}?progress=true#noticias`);
     };
 
     return (

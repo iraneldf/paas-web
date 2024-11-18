@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -8,12 +8,23 @@ import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Mail } from 'lucide-react'
 import dynamic from 'next/dynamic'
 
-const MapComponent = dynamic(() => import('@/components/MapComponent'), {
-    loading: () => <p>Cargando mapa...</p>,
+// const MapComponent = dynamic(() => import('@/components/MapComponent'), {
+//     loading: () => <div className="w-full h-full flex items-center justify-center bg-gray-100">Cargando mapa...</div>,
+//     ssr: false
+// })
+
+const MapComponentOL = dynamic(() => import('@/components/MapComponentOL'), {
+    loading: () => <div className="w-full h-full flex items-center justify-center bg-gray-100">Cargando mapa...</div>,
     ssr: false
 })
 
 export function ContactSectionForm() {
+    const [isMapLoaded, setIsMapLoaded] = useState(false)
+
+    useEffect(() => {
+        setIsMapLoaded(true)
+    }, [])
+
     return (
         <section id={'contact'} className="py-12 bg-green-50">
             <div className="container mx-auto px-4">
@@ -40,8 +51,8 @@ export function ContactSectionForm() {
 
                     <div className="space-y-6">
                         <Card>
-                            <CardContent className="pt-6 h-[300px]">
-                                <MapComponent/>
+                            <CardContent className="p-2 h-[300px] overflow-hidden">
+                                {isMapLoaded && <MapComponentOL />}
                             </CardContent>
                         </Card>
 
@@ -50,7 +61,7 @@ export function ContactSectionForm() {
                                 <ul className="space-y-4">
                                     <li className="flex items-center">
                                         <MapPin className="h-5 w-5 text-green-600 mr-2"/>
-                                        <span>Calle 7ma entre 30 y 32. Municipio Playa.Provincia La Habana</span>
+                                        <span>Calle 7ma entre 30 y 32. Municipio Playa. Provincia La Habana</span>
                                     </li>
                                     <li className="flex items-center">
                                         <Phone className="h-5 w-5 text-green-600 mr-2"/>
